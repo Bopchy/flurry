@@ -23,14 +23,19 @@ def check_connection():
 	try:
 		host = socket.gethostbyname(REMOTE_SERVER) 
 		# Retrieves the IP of bing.com, using the gethostbyname() 
-		# function
-		s= socket.create_connection((host, 80), 2)
-		# 
+		# function --- because we can only connect to a server by knowing its IP
+		s = socket.create_connection((host, 80), 20)
+		# Creates a socket object s --- create_connection() connects to the host, 
+		# on port 80, and gives a timeout period of 20 seconds. 
 		return True
+		# Returns True if making connection to host is successful -- meaning,
+		# there is internet 
 	except:
-		pass
+		# Accounts for cases where the host(IP) cannot be retrieved / 
+		# could not be resolved   
+		return "Could not resolve the host name"
 	return False
-	# Returns False if  
+	# Returns False if making connection is unsucessful   
 
 if check_connection() == True:
 	output = 'CITY'.ljust(9) 
@@ -38,13 +43,14 @@ if check_connection() == True:
 	output += 'LONGITUDE'.ljust(12)
 	output += 'TEMP'.ljust(10)
 	output += 'DESCRIPTION' 
-	output += '\n' + '='*55
+	output += '\n' + '=' * 55
 	print output
 	for city in cities:
 		query_url = BASE_URL + "?" + "q=" + city + BASE_URL2 + '\n'
 		result = json.loads(urllib2.urlopen(query_url).read())
-		# Above line 25 'opens up' query_url and 'reads' the data from the page 
-		# print result
+		# Above line 'opens up' query_url and 'reads' the data from the page 
+		
+		# Prints result
 		table = result['name'].ljust(10) 
 		table += str(result['coord']['lat']).ljust(10)
 		table += str(result['coord']['lon']).ljust(12)

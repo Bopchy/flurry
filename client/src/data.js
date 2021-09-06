@@ -1,8 +1,10 @@
+import sunSvg from "./assets/icons/sun.svg";
+
 const data = {
   cards: [
     {
       headerText: "New York City",
-      weatherImage: "",
+      weatherImage: sunSvg,
       weatherImageAlt: "",
       tempHigh: 73,
       tempLow: 62,
@@ -10,7 +12,7 @@ const data = {
     },
     {
       headerText: "Nairobi",
-      weatherImage: "",
+      weatherImage: sunSvg,
       weatherImageAlt: "",
       tempHigh: 73,
       tempLow: 62,
@@ -18,7 +20,7 @@ const data = {
     },
     {
       headerText: "Kampala",
-      weatherImage: "",
+      weatherImage: sunSvg,
       weatherImageAlt: "",
       tempHigh: 73,
       tempLow: 62,

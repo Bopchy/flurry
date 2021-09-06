@@ -6,7 +6,7 @@ import data from "../../data";
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-offWhite box-border">
       <p>Hello</p>
       <Card cards={data.cards} />
     </div>

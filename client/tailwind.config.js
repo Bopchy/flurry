@@ -26,5 +26,8 @@ module.exports = {
   variants: {
     extend: {},
   },
+  corePlugins: {
+    lineHeight: false,
+  },
   plugins: [],
 };

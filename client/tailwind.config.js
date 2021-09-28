@@ -12,6 +12,7 @@ module.exports = {
     },
     colors: {
       gray: colors.trueGray,
+      violet: colors.violet,
       white: "#ffffff",
       offWhite: "#fff9f4",
       purple: {

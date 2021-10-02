@@ -8,7 +8,7 @@ import TemperatureCircle from "../TemperatureCircle";
 
 import data from "../../data";
 
-const Wrapper = styled.div(() => [tw`box-border p-16 `, css`
+const Wrapper = styled.div(() => [tw`box-border p-12 `, css`
   background: linear-gradient(90deg, #6D28D9 0 30%, #DDD6FE 30% 100%);
 `]);
 

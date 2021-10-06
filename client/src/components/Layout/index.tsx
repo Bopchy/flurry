@@ -5,7 +5,7 @@ const Wrapper = styled.div(() => [tw`rounded-lg bg-gray-50`]);
 
 const Layout = ({ children }: { children: React.ReactNode}) => {
     return (
-        <Wrapper>
+        <Wrapper id="main">
             {children}
         </Wrapper>
     )

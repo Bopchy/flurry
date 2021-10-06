@@ -1,10 +1,10 @@
 import React from 'react';
-import tw from 'twin.macro';
+import tw, { styled } from 'twin.macro';
 
-const SideNav = (() => [tw``]);
+const SideNav = styled.div(() => []);
 
 const SideBar = () => {
-    return;
+    return <SideNav />;
 };
 
 export default SideBar;

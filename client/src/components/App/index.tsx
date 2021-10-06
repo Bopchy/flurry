@@ -5,6 +5,7 @@ import Card from "../Card";
 import DetailsList from "../DetailsList";
 import Layout from '../Layout';
 import TemperatureCircle from "../TemperatureCircle";
+import SideBar from '../Sidebar';
 
 import data from "../../data";
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <Wrapper>
       <Layout>
+      <SideBar />
         <Card cards={data.cards} />
         <DetailsList detailsList={data.detailsList} />
         <TemperatureCircle temperature={data.temperature} />

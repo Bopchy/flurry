@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import tw, { styled, css } from 'twin.macro';
 
+import Toggle from './ToggleButton';
+
 const Nav = styled.nav(() => [tw`flex items-center px-12`, css`
   input {
       background-color: transparent;
@@ -17,9 +19,12 @@ const NavBar = () => {
   }
  
   return (
-    <Nav>
-      <input value={query} onChange={handleChange} placeholder="Search for city..." />
-    </Nav>
+    <>
+        <Nav>
+        <input value={query} onChange={handleChange} placeholder="Search for city..." />
+        </Nav>
+        <Toggle />
+    </>
   );  
 };
 

@@ -9,8 +9,8 @@ const Toggle = () => {
     // get if celsius or fahrenheit from context
     return (
         <Wrapper>
-            <Button>C</Button>
-            <Button>F</Button>
+            <Button>Celsius</Button>
+            <Button>Fahrenheit</Button>
         </Wrapper>
     )
 };

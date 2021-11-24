@@ -1,4 +1,5 @@
-import urllib2, urllib, json, socket 
+from urllib.request import urlopen
+import json, socket 
 
 '''
 	Code that checks for internet connection, and if present,
@@ -44,10 +45,10 @@ if check_connection() == True:
 	output += 'TEMP'.ljust(10)
 	output += 'DESCRIPTION' 
 	output += '\n' + '=' * 55
-	print output
+	print(output)
 	for city in cities:
 		query_url = BASE_URL + "?" + "q=" + city + BASE_URL2 + '\n'
-		result = json.loads(urllib2.urlopen(query_url).read())
+		result = json.loads(urlopen(query_url).read())
 		# Above line 'opens up' query_url and 'reads' the data from the page 
 		
 		# Prints result
@@ -56,6 +57,6 @@ if check_connection() == True:
 		table += str(result['coord']['lon']).ljust(12)
 		table += str(result['main']['temp']).ljust(10) 
 		table += result['weather'][0]['description'].ljust(10)
-		print table
+		print(table)
 else:
-	print "No internet connection at this time"
+	print("No internet connection at this time")

@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import { GlobalStyles } from 'twin.macro';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+const AppContext = createContext({
+  theme: 'light',
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <App />
+    <AppContext.Provider value={{theme: "light"}}>
+      <GlobalStyles />
+      <App />
+    </AppContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -5,7 +5,7 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-const AppContext = createContext({
+export const AppContext = createContext({
   theme: 'light',
 });
 

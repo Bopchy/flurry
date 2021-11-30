@@ -6,12 +6,12 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 export const AppContext = createContext({
-  theme: 'light',
+  tempFormat: 'light',
 });
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContext.Provider value={{theme: "light"}}>
+    <AppContext.Provider value={{tempFormat: "celsius"}}>
       <GlobalStyles />
       <App />
     </AppContext.Provider>

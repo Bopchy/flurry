@@ -1,20 +1,17 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { GlobalStyles } from 'twin.macro';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-
-export const AppContext = createContext({
-  tempFormat: 'light',
-});
+import TempFormatContextProvider from "./context/tempFormat.context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContext.Provider value={{tempFormat: "celsius"}}>
       <GlobalStyles />
-      <App />
-    </AppContext.Provider>
+      <TempFormatContextProvider>
+        <App />
+      </TempFormatContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

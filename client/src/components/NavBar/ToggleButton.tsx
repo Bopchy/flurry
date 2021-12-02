@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { styled } from 'twin.macro';
+import { css, styled } from 'twin.macro';
 import { TempFormatContext } from "../../context/tempFormat.context";
 
 const Wrapper = styled.span(() => []);
 
-const Button = styled.button(() => []);
+const Button = styled.button(() => [css`border: none; background-color: gray;`]);
 
 const Toggle = () => {
     const temp = useContext(TempFormatContext)

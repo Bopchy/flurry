@@ -5,14 +5,14 @@ import { IButton } from "../../typings/components";
 
 const Wrapper = styled.span(() => []);
 
-const Button = styled.button(() => [css`border: none; background-color: gray;`]);
+const Button = styled.button<IButton>(() => [css`border: none; background-color: gray;`]);
 
-const Toggle: IButton = () => {
+const Toggle = () => {
     const temp = useContext(TempFormatContext)
     
     return (
         <Wrapper>
-            <Button onClick={temp?.update}>{temp?.format}</Button>
+            <Button onClick={() => temp?.update}>{temp?.format}</Button>
         </Wrapper>
     )
 };

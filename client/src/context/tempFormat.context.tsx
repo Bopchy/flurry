@@ -6,7 +6,7 @@ export const TempFormatContext = createContext<ITempFormatContext | undefined>(u
 const TempFormatContextProvider = ({ children }: ITempFormatProvider) => {
     const [format, setFormat] = useState("celsius");
     const initialContext: ITempFormatContext = {
-        format: "celsius",
+        format: format,
         update: () => {
             if (format === "celsius") {
                 return setFormat("fahrenheit")

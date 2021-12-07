@@ -12,7 +12,7 @@ const Toggle = () => {
     
     return (
         <Wrapper>
-            <Button onClick={() => temp?.update}>{temp?.format}</Button>
+            <Button onClick={() => temp?.update()}>{temp?.format}</Button>
         </Wrapper>
     )
 };

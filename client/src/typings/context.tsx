@@ -4,5 +4,5 @@ export interface ITempFormatProvider {
 
 export interface ITempFormatContext {
     format: string,
-    update: (currentFormat: string) => void
+    update: () => void
 }

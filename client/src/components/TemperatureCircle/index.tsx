@@ -7,7 +7,7 @@ const Circle = styled.div(() => [
     tw`rounded-full border-8 border-white w-72 h-72 flex justify-center`,
     css`
       div {
-          $`[tw`border-2 border-black rounded-full w-48 h-48 self-center`]`
+          ${[tw`border-2 border-black rounded-full w-48 h-48 self-center`]}
       }
     `
 ]);

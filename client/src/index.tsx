@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { GlobalStyles } from 'twin.macro';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import TempFormatContextProvider from "./context/tempFormat.context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <GlobalStyles />
+      <TempFormatContextProvider>
+        <App />
+      </TempFormatContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

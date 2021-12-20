@@ -1,0 +1,4 @@
+Where I Left Off last time:
+
+- Finish Toggle button
+- Connect context to toggle btwn celsius and fahrenheit
